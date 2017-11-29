@@ -1,0 +1,1 @@
+<div>Copyright © SNB <?=date("Y")?></div>

@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /blocks/
+Disallow: /content/
+Disallow: /core/
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /template/
+Disallow: /?q=
+Disallow: /index.php*
+Disallow: /*openstat*
+Disallow: /*utm*
+Disallow: /*from*
+Disallow: /*gclid*
+Crawl-delay: 2
+Host: www.sn-b.ru
+Sitemap: http://www.sn-b.ru/sitemap.xml
