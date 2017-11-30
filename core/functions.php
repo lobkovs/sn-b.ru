@@ -1,7 +1,7 @@
 <?php 
 	function runApplication() {
 
-		// header("Expires: " . gmdate("D, d M Y H:i:s", strtotime("+1 day")) ." GMT");
+		/// header("Expires: " . gmdate("D, d M Y H:i:s", strtotime("+1 day")) ." GMT");
 
 		$includePageContent = null;
 		$mainTemplate = "template/template.php";
