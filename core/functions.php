@@ -29,22 +29,25 @@
 			$q = "error";
 		}
 
-		// РџРѕР»СѓС‡РёРј Р·Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹
-		$headerTitle = getPageHeader($q);
+		// Получим заголовок страницы
+		$headerTitle = getPageTitle($q);
+		// Получим meta description 
+		$metaDescription = getMetaDescription($q);
 
-		// РџРѕР»СѓС‡Р°РµРј РєРѕРЅС‚РµРЅС‚ СЃС‚СЂР°РЅРёС†С‹
+		// Получаем контент страницы
 		$content = ob_include($includePageContent);
-		// РџРѕРґРєР»СЋС‡Р°РµРј РіР»Р°РІРЅС‹Р№ С€Р°Р±Р»РѕРЅ
+		// Подключаем главный шаблон
 		include_once($mainTemplate);
 		// include_once($includePageContent);
 	}
 
+	// Return current address without host
 	function getQ() {
 
 		if (isset($_GET['q']) && !empty($_GET['q'])) {
 			$q = strtolower($_GET['q']);
 
-			// РЎРґРµР»Р°РµРј 301 СЂРµРґРёСЂРµРєС‚ РµСЃР»Рё РЅР° РєРѕРЅС†Рµ Сѓ РЅР°СЃ РµСЃС‚СЊ "/"
+			// Сделаем 301 редирект если на конце у нас есть "/"
 			if (substr(strrev($q), 0, 1) == "/") {
 				$request = rtrim($request, "/");
 				header("HTTP/1.1 301 Moved Permanently"); 
@@ -58,6 +61,7 @@
 		return $q;
 	}
 
+	// Include file content
 	function ob_include($file) {
 		if (file_exists($file)) {
 			ob_start();
@@ -107,12 +111,26 @@
 		return $output;
 	}
 
-	function getPageHeader($path) {
-		$defaultTitle = "Р¤РёСЂРјР° SNB";
-		// РџРѕРґРєР»СЋС‡Р°РµРј СЃРїРёСЃРѕРє Р·Р°РіРѕР»РѕРІРѕРєРѕРІ СЃС‚СЂР°РЅРёС†
-		include_once(getContentFolderOnServer() . "/" . 'titles.page' . getExtensionFile());
-		// Р’РѕР·РІСЂР°С‰Р°РµРј Р·Р°РіРѕР»РѕРІРѕРє
-		return isset($titles[$path]) ? $titles[$path].' | '.$defaultTitle : $defaultTitle;
+	// Return page title
+	function getPageTitle($path) {
+		$defaultTitle = "Фирма SNB";
+		$meta = getMeta($path);
+		return $meta['title'] ? $meta['title'] . ' | ' . $defaultTitle : $defaultTitle;
+	}
+
+	// Return meta description page
+	function getMetaDescription($path) {
+		$defaultDescription = "Изготавливаем карнизы для ванн на заказ в единичных экземплярах и партиями. Изготовление складной садовой мебели на заказ в единичных экземплярах и партиями, а так же мангалы и перголы. Электро-плазменное полирование. Сверловка цветных металлов, стали, чугуна.";
+		$meta = getMeta($path);
+		return $meta['description'] ? $meta['description'] : $defaultDescription;
+	}
+
+	// Return base meta object for current path
+	function getMeta($path) {
+		// Подключаем список заголовоков страниц
+		include(getContentFolderOnServer() . "/" . 'titles.page' . getExtensionFile());
+		// Возвращаем заголовок
+		return $titles[$path] ? $titles[$path] : '';
 	}
 
 	function getContentFolderOnServer() {
@@ -123,52 +141,53 @@
 		return ".php";
 	}
 
-	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РїСѓС‚СЊ СЃС‚СЂР°РЅРёС†С‹
+	// Возвращает корректный путь страницы
 	function getPagePath($q) {
 
-		// РќР°С‡Р°Р»СЊРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
+		// Начальные значения
 		$contentPath = getContentFolderOnServer();
 		$filePHP = getExtensionFile();
 		$prefixContentFile = "content.";
 
-		// Р Р°СЃРїР°СЂСЃРёРІР°РµРј РїСѓС‚СЊ
+		// Распарсиваем путь
 		$separateQ = explode("/", $q);
 
-		// РЎСЂР°Р·Сѓ РґРѕР±Р°РІРёРј РІРЅР°С‡Р°Р»Рѕ РїСѓС‚СЊ Рє РІРЅСѓС‚СЂРµРЅРЅРµР№ РїР°РїРєРµ РЅР° СЃРµСЂРІРµСЂРµ "content"
+		// Сразу добавим вначало путь к внутренней папке на сервере "content"
 		array_unshift($separateQ, $contentPath);
 
-		// РџРѕСЃС‡РёС‚Р°РµРј РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ
+		// Посчитаем кол-во элементов
 		$countPath = count($separateQ);
 
-		// РРЅРґРµРєСЃ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР°
+		// Индекс последнего элемента массива
 		$index = $countPath - 1;
 
 		if ($countPath > 2) {
-			// Р•СЃР»Рё РїСѓС‚СЊ РјРЅРѕРіРѕСЃР»РѕР¶РЅС‹Р№, С‚.Рµ. Р±РѕР»СЊС€Рµ РґРІСѓС… СЌР»РµРјРµРЅС‚РѕРІ, РґРІСѓС… РїРѕС‚РѕРјСѓ С‡С‚Рѕ РјС‹ РІРЅР°С‡Р°Р»Рµ РїСЂРёР±Р°РІРёР»Рё РїСѓС‚СЊ РґРѕ РїР°РїРєРё "content",
-			// С‚РѕРіРґР° РїСЂРѕСЃС‚Рѕ РІРѕР·РјС‘Рј РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚, РґРѕР±Р°РІРёРј РїСЂРµС„РёРєСЃ Рё СЂР°СЃС€РёСЂРµРЅРёРµ Рё РїСЂРѕРІРµСЂРёРј РЅР° СЃСѓС‰РµС‚РІРѕРІР°РЅРёРµ
+			// Если путь многосложный, т.е. больше двух элементов, двух потому что мы вначале прибавили путь до папки "content",
+			// тогда просто возмём последний элемент, добавим префикс и расширение и проверим на сущетвование
 			$separateQ[$index] = $prefixContentFile . $separateQ[$index] . $filePHP;
 			$tempPath = implode("/", $separateQ);
 			if (file_exists($tempPath))
 				return $tempPath;
 
 		} else {
-			// РёРЅР°С‡Рµ РїСЂРѕРІРµСЂРёРј РЅР° СЃСѓС‰РµС‚РІРѕРІР°РЅРёРµ РїСѓС‚СЊ СЃСЂР°Р·Сѓ РѕС‚ РєРѕСЂРЅСЏ, РЅР°РїСЂРёРјРµСЂ РєРѕРЅС‚Р°РєС‚С‹
+			// иначе проверим на сущетвование путь сразу от корня, например контакты
 			$tempPath = $contentPath . "/" . $prefixContentFile . $q . $filePHP;
 
 			if (file_exists($tempPath)) {
 				return $tempPath;
 			} else {
-				// РµСЃР»Рё РЅРµС‚, С‚РѕРіРґР° СЌС‚Рѕ РїР°РїРєР° Рё РјС‹ РґРѕР±Р°РІРёРј РґРµС„РѕР»С‚РЅС‹Р№ РёРЅРґРµРєСЃРЅС‹Р№ С„Р°Р№Р» Рє РїР°РїРєРµ Рё РїСЂРѕРІРµСЂРёРј РїСѓС‚СЊ
+				// если нет, тогда это папка и мы добавим дефолтный индексный файл к папке и проверим путь
 				$separateQ[] = $prefixContentFile . "index" . $filePHP;
 				$tempPath = implode("/", $separateQ);
 				if (file_exists($tempPath))
 					return $tempPath;
 			}
 		}
-		// РЅСѓ Р° РµСЃР»Рё РЅРёС‡РµРіРѕ РЅРµ РЅР°С€Р»РѕСЃСЊ С‚РѕРіРґР° РІРµСЂРЅС‘Рј false
+		// ну а если ничего не нашлось тогда вернём false
 		return false;
 	}
 
+	// Return block(s) for region
 	function getBlocks($region, $check = false) {
 
 		$directoryRoot = "blocks";
@@ -177,7 +196,7 @@
 		$q = getQ();
 
 		if (!file_exists($blocksPath)) {
-			printError("Р РµРіРёРѕРЅ $region, РЅРµ РЅР°Р№РґРµРЅ!");
+			printError("Регион $region, не найден!");
 			return false;
 		}
 
@@ -199,7 +218,7 @@
 			if (file_exists($settingsPath)) {
 				include_once($settingsPath);
 			} else {
-				printError("РќР°СЃС‚СЂРѕР№РєРё Р±Р»РѕРєР° $folder РЅРµ РЅР°Р№РґРµРЅС‹!");
+				printError("Настройки блока $folder не найдены!");
 				continue;
 			}
 
@@ -229,7 +248,7 @@
 							break;
 					}
 				} else {
-					printError("РњР°СЃСЃРёРІ Р·Р°РїСЂРµС‰РµРЅРЅС‹С… РїСѓС‚РµР№ РїСѓСЃС‚ РёР»Рё РµСЃС‚СЊ РєР°РєРёРµ С‚Рѕ РїСЂРѕР±РµРјС‹!");
+					printError("Массив запрещенных путей пуст или есть какие то проблемы!");
 				}
 			}
 

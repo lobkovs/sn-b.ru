@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru" xml:lang="ru">
 	<head>
 		<title><?=$headerTitle?></title>
 
@@ -9,9 +9,9 @@
 		<!-- META -->
 		<meta http-equiv="content-type" content="text/html; charset=windows-1251">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="keywords" content="карнизы для ванн, складная садовая мебель, электро-плазменное полирование, полировка, сверловка цветных металлов, сверловка">
+		<meta name="keywords" content="карнизы для ванн, складная садовая мебель, мангалы, перголы, электро-плазменное полирование, полировка, сверловка цветных металлов, сверловка">
 		<meta name="author" content="Фирма SNB">
-		<meta name="description" content="Изготовление карнизов для ванн. Изготовление складной садовой мебели. Электро-плазменное полирование. Сверловка цветных металлов, стали, чугуна.">
+		<meta name="description" content="<?=$metaDescription?>">
 		<meta name='yandex-verification' content='76652e23788cd025' />
 
 		<!-- CSS -->

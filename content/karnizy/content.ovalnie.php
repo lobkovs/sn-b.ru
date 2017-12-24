@@ -1,46 +1,49 @@
 <div id="ovalnie">
-	<h1>Овальные карнизы</h1>
-	<p class="width50">
-		<a class="fancybox" rel="group" title="Без держателя" href="/upload/ovalnie/ovalnie_01.jpg">
-			<img src="/upload/ovalnie/ovalnie_01_s.jpg" alt="Без держателя" />
-		</a>
-		<span class="fancy-text">Без держателя</span>
+	<h1>Овальные карнизы для ванной</h1>
+	<p>
+		Изготовленный на заказ, карниз будет точно повторять контур именно Вашей ванны. Карнизы изготавливаются из безопасной нержавеющей стали, которую допускается применять в пищевом производстве.
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Без держателя" href="/upload/ovalnie/ovalnie_02.jpg">
-			<img src="/upload/ovalnie/ovalnie_02_s.jpg" alt="Без держателя" />
+		<a class="fancybox" rel="group" title="Овальный карниз для ванной без потолочных креплений" href="/upload/ovalnie/ovalnie_01.jpg">
+			<img src="/upload/ovalnie/ovalnie_01_s.jpg" alt="Овальный карниз для ванной без потолочных креплений" />
 		</a>
-		<span class="fancy-text">Без держателя</span>
+		<span class="fancy-text">Овальный карниз для ванной без потолочных креплений</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Карниз овальный для ванны" href="/upload/ovalnie/ovalnie_03.jpg">
-			<img src="/upload/ovalnie/ovalnie_03_s.jpg" alt="Карниз овальный для ванны" />
+		<a class="fancybox" rel="group" title="Овальный карниз для душевой шторки" href="/upload/ovalnie/ovalnie_02.jpg">
+			<img src="/upload/ovalnie/ovalnie_02_s.jpg" alt="Овальный карниз для душевой шторки" />
 		</a>
-		<span class="fancy-text">Натяжной потолок</span>
+		<span class="fancy-text">Овальный карниз для душевой шторки</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Овальный карниз" href="/upload/ovalnie/ovalnie_04.jpg">
-			<img src="/upload/ovalnie/ovalnie_04_s.jpg" alt="Овальный карниз" />
+		<a class="fancybox" rel="group" title="Овальный карниз для ванной комнаты с натяжным потолком" href="/upload/ovalnie/ovalnie_03.jpg">
+			<img src="/upload/ovalnie/ovalnie_03_s.jpg" alt="Овальный карниз для ванной комнаты с натяжным потолком" />
 		</a>
-		<span class="fancy-text">Натяжной потолок</span>
+		<span class="fancy-text">Овальный карниз для ванной комнаты с натяжным потолком</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Карниз для овальной ванны" href="/upload/ovalnie/ovalnie_05.jpg">
-			<img src="/upload/ovalnie/ovalnie_05_s.jpg" alt="Карниз для овальной ванны" />
+		<a class="fancybox" rel="group" title="Овальный карниз для ванной" href="/upload/ovalnie/ovalnie_04.jpg">
+			<img src="/upload/ovalnie/ovalnie_04_s.jpg" alt="" />
 		</a>
-		<span class="fancy-text">Натяжной потолок</span>
+		<span class="fancy-text">Овальный карниз для ванной</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Овальный карниз для ванны" href="/upload/ovalnie/ovalnie_06.jpg">
-			<img src="/upload/ovalnie/ovalnie_06_s.jpg" alt="Овальный карниз для ванны" />
+		<a class="fancybox" rel="group" title="Душевой овальный карниз под натяжной потолок" href="/upload/ovalnie/ovalnie_05.jpg">
+			<img src="/upload/ovalnie/ovalnie_05_s.jpg" alt="Душевой овальный карниз под натяжной потолок" />
 		</a>
-		<span class="fancy-text">Потолок гипсокартон</span>
+		<span class="fancy-text">Душевой овальный карниз под натяжной потолок</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="Овальная ванна карниз" href="/upload/ovalnie/ovalnie_07.jpg">
-			<img src="/upload/ovalnie/ovalnie_07_s.jpg" alt="Овальная ванна карниз" />
+		<a class="fancybox" rel="group" title="Овальный карниз в ванную с потолком из гипсокартона" href="/upload/ovalnie/ovalnie_06.jpg">
+			<img src="/upload/ovalnie/ovalnie_06_s.jpg" alt="Овальный карниз в ванную с потолком из гипсокартона" />
 		</a>
-		<span class="fancy-text">Потолок гипсокартон</span>
+		<span class="fancy-text">Овальный карниз в ванную с потолком из гипсокартона</span>
+	</p>
+	<p class="width50">
+		<a class="fancybox" rel="group" title="Овальный карниз для ванной комнаты с реечным потолком" href="/upload/ovalnie/ovalnie_07.jpg">
+			<img src="/upload/ovalnie/ovalnie_07_s.jpg" alt="Овальный карниз для ванной комнаты с реечным потолком" />
+		</a>
+		<span class="fancy-text">Овальный карниз для ванной комнаты с реечным потолком</span>
 	</p>
 	<p class="width50">
 		<a class="fancybox" rel="group" title="Овальный карниз" href="/upload/ovalnie/ovalnie_08.jpg">

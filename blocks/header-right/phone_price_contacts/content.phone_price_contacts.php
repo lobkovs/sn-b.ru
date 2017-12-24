@@ -21,7 +21,7 @@
 					<textarea name="comment" id="comment"></textarea>
 				</fieldset>
 				<fieldset>
-					<label for="captcha">Введите текст с картинки <span id="refresh-captcha">(обновить картинку)</span></label>
+					<label for="captcha">Введите текст с картинки <span id="refresh-captcha" title="Обновить картинку">(обновить картинку)</span></label>
 					<img class="verify-pic" src="/verify" height="50px" width="100px" alt="Картинка" />
 					<input type="text" name="captcha" id="captcha" />
 				</fieldset>

@@ -1,17 +1,27 @@
+<?php
+	$links = array(
+		"/karnizy/pryamie" => "Прямые и без держателей",
+		"/karnizy/g-type" => "Г-образные",
+		"/karnizy/p-type" => "П-образные",
+		"/karnizy/t-type" => "Т-образные",
+		"/karnizy/radiusnie" => "Радиусные",
+		"/karnizy/assimetrichnie" => "Ассиметричные",
+		"/karnizy/ovalnie" => "Овальные",
+		"/karnizy/kruglie" => "Круглые",
+		"/karnizy/dlya-dusha" => "Для душа",
+		"/karnizy/dlya-basseinov" => "Для бассеинов",
+		"/karnizy/medical" => "Для медучреждений",
+		"/karnizy/slojnie" => "Сложной конфигурации",
+	);
+	$q = getQ();
+?>
 <div class="header-text">
 	Формы карнизов
 </div>
 <ul>
-    <li><a href="/karnizy/pryamie">Прямые и без держателей</a></li>
-	<li><a href="/karnizy/g-type">Г-образные</a></li>
-	<li><a href="/karnizy/p-type">П-образные</a></li>
-	<li><a href="/karnizy/t-type">Т-образные</a></li>
-	<li><a href="/karnizy/radiusnie">Радиусные</a></li>
-	<li><a href="/karnizy/assimetrichnie">Ассиметричные</a></li>
-	<li><a href="/karnizy/ovalnie">Овальные</a></li>
-	<li><a href="/karnizy/kruglie">Круглые</a></li>
-	<li><a href="/karnizy/dlya-dusha">Для душа</a></li>
-	<li><a href="/karnizy/dlya-basseinov">Для бассеинов</a></li>
-	<li><a href="/karnizy/medical">Для медучреждений</a></li>
-	<li><a href="/karnizy/slojnie">Сложной конфигурации</a></li>
+	<?php foreach ($links as $path => $title):?>
+		<li <?=$path == "/" . $q ? "class=\"active\"" : ""?>>
+			<a href="<?=$path?>"><?=$title?></a>
+		</li>
+	<?php endforeach; ?>
 </ul>

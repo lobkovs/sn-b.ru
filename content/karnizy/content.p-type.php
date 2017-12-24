@@ -1,33 +1,36 @@
 <div id="p-type">
-	<h1>П-образные карнизы</h1>
-	<p class="width50">
-		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_01.jpg" title="Штора для ванны">
-			<img src="/upload/p-type/p-type_01_s.jpg" alt="Штора для ванны" />
-		</a>
-		<span class="fancy-text">Натяжной потолок</span>
+	<h1>П-образные карнизы для ванной</h1>
+	<p>
+		Карнизы изготавливаются из нержавеющей стали и специально предназначены для использования в помещениях с повышенной влажностью. Поверхность имеет эстетичный вид благодаря зеркальной полировке и не теряет вид десятилетиями.
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_02.jpg" title="П-образный карниз в ванну">
-			<img src="/upload/p-type/p-type_02_s.jpg" alt="П-образный карниз в ванну" />
+		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_01.jpg" title="П-образный карниз для ванной с натяжным потолком">
+			<img src="/upload/p-type/p-type_01_s.jpg" alt="П-образный карниз для ванной с натяжным потолком" />
 		</a>
-		<span class="fancy-text">Потолок кипсокартон</span>
+		<span class="fancy-text">П-образный карниз для ванной с натяжным потолком</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_03.jpg" title="Монтаж карниза для ванны">
-			<img src="/upload/p-type/p-type_03_s.jpg" alt="Монтаж карниза для ванны" />
+		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_02.jpg" title="П-образный карниз в ванную комнату">
+			<img src="/upload/p-type/p-type_02_s.jpg" alt="П-образный карниз в ванную комнату" />
 		</a>
-		<span class="fancy-text">Потолок кипсокартон</span>
+		<span class="fancy-text">П-образный карниз в ванную комнату</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_04.jpg" title="Карниз сложной формы">
-			<img src="/upload/p-type/p-type_04_s.jpg" alt="Карниз сложной формы" />
+		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_03.jpg" title="П-образный карниз для ванны">
+			<img src="/upload/p-type/p-type_03_s.jpg" alt="П-образный карниз для ванны" />
 		</a>
-		<span class="fancy-text">Реечный потолок</span>
+		<span class="fancy-text">П-образный карниз для ванны</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_05.jpg" title="Стеклянный потолок">
-			<img src="/upload/p-type/p-type_05_s.jpg" alt="Стеклянный потолок" />
+		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_04.jpg" title="П-образный карниз для душевой шторки">
+			<img src="/upload/p-type/p-type_04_s.jpg" alt="П-образный карниз для душевой шторки" />
 		</a>
-		<span class="fancy-text">Стеклянный потолок</span>
+		<span class="fancy-text">П-образный карниз для душевой шторки</span>
+	</p>
+	<p class="width50">
+		<a class="fancybox" rel="p-type" href="/upload/p-type/p-type_05.jpg" title="П-образный карниз для ванны с центральным креплением к стеклянному потолку">
+			<img src="/upload/p-type/p-type_05_s.jpg" alt="П-образный карниз для ванны с центральным креплением к стеклянному потолку" />
+		</a>
+		<span class="fancy-text">П-образный карниз для ванны с центральным креплением к стеклянному потолку</span>
 	</p>
 </div>
