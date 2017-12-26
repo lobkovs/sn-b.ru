@@ -46,10 +46,10 @@
 		<span class="fancy-text">ќвальный карниз дл€ ванной комнаты с реечным потолком</span>
 	</p>
 	<p class="width50">
-		<a class="fancybox" rel="group" title="ќвальный карниз" href="/upload/ovalnie/ovalnie_08.jpg">
-			<img src="/upload/ovalnie/ovalnie_08_s.jpg" alt="ќвальный карниз" />
+		<a class="fancybox" rel="group" title="ќвальный карниз шторки под реечный потолок в ванной" href="/upload/ovalnie/ovalnie_08.jpg">
+			<img src="/upload/ovalnie/ovalnie_08_s.jpg" alt="ќвальный карниз шторки под реечный потолок в ванной" />
 		</a>
-		<span class="fancy-text">–еечный потолок</span>
+		<span class="fancy-text">ќвальный карниз шторки под реечный потолок в ванной</span>
 	</p>
 </div>
 
