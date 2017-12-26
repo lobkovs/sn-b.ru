@@ -1,3 +1,4 @@
+<span>Телефоны в Москве:</span>
 <span class="text-phone">+7(495)211-34-56</span>
 <span class="text-phone">+7(916)170-17-73</span>
 <span class="text-phone">sn-b@yandex.ru</span>
